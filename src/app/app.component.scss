@@ -22,6 +22,7 @@ header {
   background-color: $dark-bg;
   text-align: center;
   color: #FFF;
+  height: 10%;
 }
 
 .navbarContainer {
@@ -51,10 +52,11 @@ nav {
 .navBtn {
   background-color: #FFF;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   width: 10%;
   color: #000;
   border-radius: 1rem;
+
 
 }
 
@@ -81,7 +83,7 @@ main {
 }
 
 .sideContent {
-  width: 39%;
+  width: 40%;
   text-align: center;
   background-color: $sidebar-bg;
   color: #FFF;
@@ -106,5 +108,9 @@ main {
 
   .sideContent {
     width: 100%;
+  }
+
+  .navBtn {
+
   }
 }
