@@ -3,15 +3,18 @@
 */
 $font-stack: Helvetica, sans-serif;
 
-$dark-bg: #192230;
-$sidebar-bg: #3e5477;
+$dark-bg: #293951;
+$sidebar-bg: #001328;
+$main-bg: #54637d;
+$nav-bg: #051a29;
 
 $content-border: 2px solid #FFF;
 /*###################################################################
     BODY, HEADER, NAV AND FOOTER STYLES
 */
-body {
+:host {
   font: $font-stack;
+  margin: 0;
 }
 
 header {
@@ -30,13 +33,17 @@ header {
   display: flex;
 }
 
+.contentContainer {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .bordered {
   border: $content-border;
 }
 
 nav {
-  background-color: $dark-bg;
-  margin: 0.2rem 0 0.2rem 0;
+  background-color: $nav-bg;
   width: 100%;
   justify-content: space-around;
 }
@@ -47,6 +54,8 @@ nav {
   margin: 2rem;
   width: 10%;
   color: #000;
+  border-radius: 1rem;
+
 }
 
 .centeredText {
@@ -66,15 +75,13 @@ footer {
 */
 main {
   width: 60%;
-  padding: 2rem;
   justify-content: space-around;
-  background-color:  $dark-bg;
+  background-color:  $main-bg;
   color: #FFF;
 }
 
 .sideContent {
-  width: 40%;
-  padding: 2rem;
+  width: 39%;
   text-align: center;
   background-color: $sidebar-bg;
   color: #FFF;
@@ -84,10 +91,14 @@ main {
   MEDIA QUERIES
 */
 @media only screen
-  and (min-device-width: 320px)
+  and (min-device-width: 200px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
+
+  .contentContainer {
+    flex-flow: wrap;
+  }
 
   main {
     width: 100%;
@@ -95,9 +106,5 @@ main {
 
   .sideContent {
     width: 100%;
-  }
-
-  .flexContainer {
-    display: block;
   }
 }
